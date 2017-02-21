@@ -1,0 +1,134 @@
+{
+   "posts":
+   {
+      "#text": "\n  ", 
+      "row": 
+[
+ {
+   "Body": "<p>This diagram is on <a href=\"http://en.wikipedia.org/wiki/NP-complete\" rel=\"nofollow\">Wikipedia</a>:</p>\n\n<p><img src=\"http://i.stack.imgur.com/3i26z.png\" alt=\"On left side we see NP-hard intersecting NP class (assuming P!=NP), on right side we see NP-hard including NP (assuming P=NP) \"></p>\n\n<p>On left side we see NP-hard intersecting NP class (assuming P!=NP), on right side we see NP-hard including NP (assuming P=NP) </p>\n\n<p>Where should I place the following problems (assume decisional part)?</p>\n\n<ul>\n<li>Traveling salesman</li>\n<li>Subset sum problem</li>\n<li>Sorting a list (any problem known to be solvable and verifiable in Polinomial time)</li>\n<li>Hanoi Towers</li>\n</ul>\n\n<p>I'm a bit confused because I've seen many versions of those diagrams (I'm not even sure those are correct right now).</p>\n",
+   "ViewCount": 20,
+   "Tags": "<p-vs-np>",
+   "CommentCount": 3,
+   "AnswerCount": 0,
+   "creationTime": 4
+ },
+ {
+   "Body": "<p>I'm doing revision for a module on programming language semantics and\nI'm having trouble understanding the introduction of side-effects in\nexpressions.</p>\n\n<p>We assume a standard syntax for arithmetic expression, with the four\nusual operations, plus the unary prefix and postfix operator\n$\\texttt{++}$, defined as in language C, applicable to variables only\nas in $\\texttt{V++}$, and assigment statement $\\texttt{V:=E}$.</p>\n\n<p>We have seen how to define the denotation function\n$[\\![\\texttt{E}]\\!]_{\\mathrm{Exp}}$ when we have to evaluate an\nexpression $\\texttt{E}$ without side-effect, to return a value\nresulting from that evaluation.</p>\n\n<p>In order to give a denotational semantics for expressions with side-effects, we need to change the type of the denotation function $[\\![\\texttt{E}]\\!]_{\\mathrm{Exp}}$ for expressions $\\texttt{E}$, so that it returns both the value of the expression and the state as modified by the side-effects. I.e., we want to define a denotation function</p>\n\n<p>$[\\![\\texttt{E}]\\!]_{\\mathrm{Exp}} : State → Int×State$</p>\n\n<p>by induction on the form of expressions $\\texttt{E}$. For example, in the case $\\texttt{E}$ has the form $\\texttt{E1+E2}$, we define:</p>\n\n<p>$[\\![\\texttt{E1+E2}]\\!]_{\\mathrm{Exp}}(S) = (n_1 + n_2, S_2)$</p>\n\n<p>where $(n_1, S_1) = [\\![\\texttt{E1}]\\!]_{\\mathrm{Exp}}(S)$</p>\n\n<p>and $(n_2, S_2) = [\\![\\texttt{E2}]\\!]_{\\mathrm{Exp}}(S_1)$</p>\n\n<p>This says first evaluate the leftmost expression $\\texttt{E1}$, giving the integer value $n_1$ and updated state $S_1$, then evaluate $\\texttt{E2}$ in that updated state, giving the integer value $n_2$ and updated state $S_2$; the value of the expression is $n_1 + n_2$, and evaluation has the side effect of updating the state to $S_2$.</p>\n\n<p>However this does not show when side effects actually take place, and I do not know how to write the denotation function for expressions that do produce side-effects. Can you tell me how to complete the inductive definition of $[\\![\\texttt{E}]\\!]_{\\mathrm{Exp}}$, including the case where $\\texttt{E}$ is of the form  $\\texttt{V++}$?</p>\n\n<p>Then, how should one change\n the definition of\n the denotation function $[\\![\\texttt{V:=E}]\\!]_{\\mathrm{Pgm}}$ for the assignment statement, to take account of the changes in the definition of $[\\![\\texttt{E}]\\!]_{\\mathrm{Exp}}$, which it necessarily uses?</p>\n\n<p>Are there other changes that would need to be made to the denotational semantics of the language? </p>\n",
+   "ViewCount": 143,
+   "Tags": "<programming-languages><semantics><imperative-programming><denotational-semantics>",
+   "CommentCount": 2,
+   "AnswerCount": 1,
+   "creationTime": 4
+ },
+ {
+   "Body": "<p>What is the best upper bound that is known for the number of hamiltonian cycles on a $n \\times n $ grid graph?</p>\n\n<p>I did some searching and found that the number of hamiltonian cycles on a planar graph with $n$ vertices is $O(\\sqrt[4]{30}^n)$ where $n$ is the number of vertices in the graph. For grid graphs, I just found enumerations for small $n$, but no bounds.</p>\n",
+   "ViewCount": 67,
+   "Tags": "<graphs><combinatorics><hamiltonian-path><square-grid><hamiltonian-circuit>",
+   "CommentCount": 1,
+   "AnswerCount": 0,
+   "creationTime": 4
+ },
+ {
+   "Body": "<p>Consider the following language: </p>\n\n<p>$$L = \\{ \\langle M \\rangle \\ |\\ M \\text { is a TM that decides the halting problem} \\}$$</p>\n\n<blockquote>\n  <p>determine whether or not the language is in $R$.</p>\n</blockquote>\n\n<p>Now, from my understanding an $\\langle M \\rangle \\in L$ doesn't necessarily returns the right answer but rather halts for every $\\langle P, x \\rangle$ where $p$ is a program (=TM) and $x$ is an input for the program.   </p>\n\n<p>I am guessing the language isn't decidable and can be showed as such by some reduction, but couldn't think of something useful. </p>\n\n<p>I'll be glad for help. </p>\n",
+   "ViewCount": 73,
+   "Tags": "<formal-languages><turing-machines><reductions><undecidability>",
+   "CommentCount": 14,
+   "AnswerCount": 1,
+   "creationTime": 4
+ },
+ {
+   "Body": "<p>Here is a problem I am trying to solve:</p>\n\n<blockquote>\n  <p>The bin packing decision problem is defined as follows: given an unlimited number of\n  bins, each of capacity equal to $1$, and $n$ objects with sizes $s_1$, $s_2$, $\\dots$, $s_n$ ($0 &lt; s_i ≤ 1$), do the objects fit in $k$ bins (where $k$ is a given\n  integer)? The bin packing optimization problem is to find the smallest\n  number of bins into which the objects can be packed. Show that if the\n  decision problem can be solved in polynomial time, then the\n  optimization problem can also be solved in polynomial time.</p>\n</blockquote>\n\n<p>I know what it is asking but I don't know what the \"optimization\" problem for this is. Is it the grouping of all the objects into different bins (for instance, $s_1$, $s_3$, and $s_6$ are in bin #$1$, $s_2$, $s_4$, $s_5$ are in bin #$2$, etc.)? Or is it simply the number of bins you need to store them? I feel like the number of bins is the decision problem...</p>\n",
+   "ViewCount": 343,
+   "Tags": "<np-complete><optimization><decision-problem><np>",
+   "CommentCount": 1,
+   "AnswerCount": 1,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>in a network architecture can two layers in different machines communicate between each other using some protocols, without having to go through the layers below, if yes how briefly ? </p>\n",
+   "ViewCount": 71,
+   "Tags": "<communication-protocols>",
+   "CommentCount": 2,
+   "AnswerCount": 1,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p><strong>The Problem:</strong>  A CPU produces the following sequence of read addresses in hex.<br>\n&nbsp; &nbsp;Suppose the cache is empty to begin with and assuming an LRU replacement, determine whether each address produces a hit or miss for a) direct mapped cache b) fully associative cache c) two way set associative cache.</p>\n\n<pre><code>20 0010 0000\n04 0000 0100\n28 0010 1000\n60 0110 0000\n20 0010 0000\n</code></pre>\n\n<p>Here is the table of my work thus far (ones I highlighted are ones I am unsure about)\n<img src=\"http://i.stack.imgur.com/Bbubw.png\" alt=\"enter image description here\"></p>\n\n<p>I know that because the cache is empty to begin with, the first five read addresses will produce produces because the addresses are not already in the cache.</p>\n\n<p>I'am having trouble with the last address. The last address is a repeat of the first address. I know that in fully associative deals with the collision problem by allowing a memory location to go into any cache line so the first won't get overwritten and a hit will be produced.</p>\n\n<p>For directly mapped, how can you tell if the first address has been overwritten or not? I know that LRU replacement is being used so if there was a collision, the first address would get overwritten. But I am not sure if there would be collision within the first five addresses(you don't have access to the number of cache lines.</p>\n\n<p>For two set associative, how would you identify which sets each address belongs to? There could be different interpretations. Like you could see, reading from left to right, bits 4-5 match in addresses starting with 20, 28, 60 so 20 would get overwritten, producing a miss. At the same time, a different interpretation could lead to the conclusion that the first doesn't get replaced.</p>\n",
+   "ViewCount": 370,
+   "Tags": "<algorithms><computer-architecture><cpu-cache><memory-hardware><memory-access>",
+   "CommentCount": 9,
+   "AnswerCount": 0,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p>This is a very straightforward question, and I apologize if it is a repeat. All I want to know is if there is any general method for determining how efficient the most efficient algorithm for some problem is, in terms of time. Barring that, are there any specific methods used that have accomplished the same for a particular problem? If this is not possible in general or at all what are the hurdles to this, and is there any research along these lines?</p>\n",
+   "ViewCount": 47,
+   "Tags": "<algorithms><time-complexity><efficiency>",
+   "CommentCount": 1,
+   "AnswerCount": 1,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>When considering machine models of computation, the Chomsky hierarchy is normally characterised by (in order), finite automata, push-down automata, linear bound automata and Turing Machines.</p>\n\n<p>For the first and last levels<sup>1</sup> (regular languages and recursively enumerable languages), it makes no difference to the power of the model whether we consider deterministic or nondeterministic machines, i.e. DFAs are equivalent to NFAs, and DTMs are equivalent to NTMs<sup>2</sup>.</p>\n\n<p>However for PDAs and LBAs, the situation is different. Deterministic PDAs recognise a strictly smaller set of languages than nondeterministic PDAs. It is also a significant open question whether deterministic LBAs are as powerful as nondeterministic LBAs or not [1].</p>\n\n<p>This prompts my question:</p>\n\n<blockquote>\n  <p>Is there a machine model that characterises the context-free languages, but for which non-determinism adds no extra power? (If not, is there some property of CFLs which suggests a reason for this?)</p>\n</blockquote>\n\n<p>It seems unlikely (to me) that it would be provable that context-free languages somehow <em>need</em> nondeterminism, but there doesn't seem to be a (known) machine model for which deterministic machines are sufficient.</p>\n\n<p>The extension question is the same, but for context-sensitive languages.</p>\n\n<p><strong>References</strong></p>\n\n<ol>\n<li>S.-Y. Kuroda, <a href=\"http://ac.els-cdn.com/S0019995864901202/1-s2.0-S0019995864901202-main.pdf?_tid=5c0f3ca0-0819-11e5-9096-00000aab0f6c&amp;acdnat=1433134251_344737eed5fdf70b02d9f3814e984188\">\"Classes of Languages and Linear Bound Automata\"</a>, Information and Control, 7:207-223, 1964.</li>\n</ol>\n\n<p><strong>Footnotes</strong></p>\n\n<ol>\n<li>Side question for the comments, is there a reason for the levels (ordered by set inclusion) of the Chomsky hierarchy to be number 3 to 0, instead of 0 to 3?</li>\n<li>To be clear, I'm talking about the languages that can be recognised only. Obviously questions of complexity are radically affected by such a change.</li>\n</ol>\n",
+   "ViewCount": 131,
+   "Tags": "<formal-languages><computability><context-free><computation-models><context-sensitive>",
+   "CommentCount": 5,
+   "AnswerCount": 0,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>A coordinator is used to sychronise the usage of resources in a distributed system.</p>\n\n<p><a href=\"http://en.wikipedia.org/wiki/Bully_algorithm\" rel=\"nofollow\">The Bully Algorithm</a> is a method to elect a new coordinator in a distributed system when the current coordinator disappears for some reason. </p>\n\n<p>I am just wondering what happens when two processes realise the demise of the coordinator simultaneously and both decide to hold an election using the Bully Algorithm?</p>\n",
+   "ViewCount": 193,
+   "Tags": "<distributed-systems><synchronization>",
+   "CommentCount": 0,
+   "AnswerCount": 1,
+   "creationTime": 4
+ },
+ {
+   "Body": "<h2>Question</h2>\n\n<p>At the very end of (most) proofs of RSA's correctness we have something like\n$$m^{ed}\\equiv m\\pmod p$$\n$$m^{ed}\\equiv m\\pmod q$$\nTherefore by the Chinese Remainder Theorem (CRT)\n$$m^{ed}\\equiv m\\pmod n$$\nwhere $n=pq$, $ed\\equiv 1\\pmod{\\phi(n)}$ and $m&lt;n$</p>\n\n<p>It's not obvious to me what work the CRT is doing here. If anyone can help that would be great, thank you!</p>\n\n<h2>My working so far</h2>\n\n<p>CRT (as I have it) says that if we have $n=n_1...n_k$ where $n_1...n_k$ are pairwise coprime and a series of equations $x\\equiv a_i\\pmod{n_i}$ for $1\\leq i\\leq n$ then there is a unique solution for $x$ modulo $n$</p>\n\n<p>To find $x$ we can use $$x=\\left(\\sum_{i=1}^ka_im_iy_i\\right)\\bmod n$$ where $m_i=n/n_i$ and $y_i=m_i^{-1}$ (mod $n_i$)</p>\n\n<p>So for the RSA proof we let $x=m^{ed}$ and say we have $x\\equiv m\\pmod p$ and $x\\equiv m\\pmod q$</p>\n\n<p>Let $q' = q^{-1}\\pmod p$ and $p'=p^{-1}\\pmod q$</p>\n\n<p>Therefore using the above equation we have\n\\begin{align}\nx&amp;=(mqq'+mpp')\\bmod n\\\\\n&amp;=m(qq'+pp')\\bmod n\n\\end{align}\nSo I need to show that $qq'+pp'\\equiv 1\\pmod n$</p>\n",
+   "ViewCount": 56,
+   "Tags": "<cryptography><correctness-proof><number-theory><security>",
+   "CommentCount": 2,
+   "AnswerCount": 0,
+   "creationTime": 4
+ },
+ {
+   "Body": "<p>I have the following problem.</p>\n\n<p>Let $P$ and $Q$ be two ordered sequences of time instants. $[p_0,p_1,\\ldots,p_n]$ and $[q_0,q_1,\\ldots,q_m]$ are the elements of $P$ and $Q$ respectively. \nA first constraint on the elements of those sequences is $p_i \\in \\mathcal{R}$ and $p_i &lt; p_{i+1}$ (the same applies for $q_i$)</p>\n\n<p>From $P$ and $Q$ a sequence $R$ can be obtained. $R$ is a sequence of sets of elements of $P$ and $Q$:  $[r_0,r_1,\\ldots,r_n]$. As $P$ and $Q$ are sequence of time instants, $R$ is a sequence of time intervals.</p>\n\n<p>There are a few constraints on the sets $r_i$:</p>\n\n<ul>\n<li>They must contain elements of both $P$ and $Q$</li>\n<li>They must contain at most one element of $P$ or at most one element of $Q$. For example, $(p_0,p_1,q_0)$ is valid, but $(p_0,q_0,q_1,p_1)$ is not</li>\n<li>Sets must not overlap: if $p_0 \\in r_i$ then $p_1 \\in {r_i,r_{i+1}}$ (the same for Q), and $max(r_i) &lt; min (r_{i+1})$.</li>\n</ul>\n\n<p>I'm stuck on this point: the output sets $r_i$ should be as precise as possible, meaning that the interval as to be the as tight as possible. So I have to define a metric that can be used to select the best sequence $R$ among all the achievable from two sequences $P$ and $Q$. The precision of a set $t(r_i)$ is defined as $max(r_i)-min(r_i)$</p>\n\n<p>For example:let $P$ be $[0,2,6]$ and $Q$ be $[1,5,7]$. According to the aforementioned rules, two possible sequences $R$ are possible:</p>\n\n<ul>\n<li>$R_0=[(0,1,2),(5,6,7)]$</li>\n<li>$R_1=[(0,1),(2,5),(6,7)]$</li>\n</ul>\n\n<p>What metric should be used to select the best between $R_0$ and $R_1$?\n$R_0$ minimizes $\\sum_i t(r_i)$ and seems to have better properties compared to $R_1$ (it correctly states that in both $P$ and $Q$ there aren't time instants between 2 and 5. However, $R_1$ has a lower mean value (1.67 vs 2).</p>\n",
+   "ViewCount": 64,
+   "Tags": "<algorithms><matching>",
+   "CommentCount": 1,
+   "AnswerCount": 0,
+   "creationTime": 4
+ },
+ {
+   "Body": "<p>I have a range query problem to solve. This problem requires not only range queries and update, but also insert or delete an element of the array. There is a series of operations that must be done in the order that they appear in the input. The operations can be one of the following: update a position of the array with a new value, insert a new element at some index of the array, remove an element at some index of the array and query information about a range of the array.</p>\n\n<p>I tried an implementation of Segment Tree where the nodes are stored in an array. Left child of node at index p is at index 2p, right child is at index 2p + 1. This implementation is not enough, because the tree is static. All I can do are range queries and update positions of the original array. Inserting or deleting elements in the original array requires the tree to be rebuilt, so the running time is O(n) (too slow for the test cases). My program is correct, but too slow.</p>\n\n<p>I Googled about Segment Trees with insertion/deletion and I read that is possible to do that with self-balancing binary search trees, like AVL or Red-Black trees. But I'm having trouble to understand how insertion or deletion would work in this dynamic Segment Tree that I need.</p>\n\n<p>Does anybody knows something about that?</p>\n",
+   "ViewCount": 418,
+   "Tags": "<data-structures><search-trees><dictionaries>",
+   "CommentCount": 1,
+   "AnswerCount": 1,
+   "creationTime": 4
+ },
+ {
+   "Body": "<p><strong>Problem</strong></p>\n\n<p>I am trying to come up with an algorithm that will dynamically throttle a client's number of outstanding requests based on the response times of completed requests. Response times are unpredictable and can be between 7 and 90 seconds. The response times are greatly affected by the total of outstanding requests, if the server is flooded it bogs down and times increase to very long times.</p>\n\n<p><strong>My specific scenario</strong></p>\n\n<p>My client application has several http requests it needs to send to a server (actually 3 servers that are load balanced and use a round robin distribution, <em>the number of servers and the code running there are out of my control</em>). Each request is a flat object containing 25 parameters. The server uses the parameters to do several look ups which may or may not trigger other look ups and calculations, this is where the server processing time is variable. The server returns a list of corresponding results which can be 0 to approximately 25 in length for most results.</p>\n\n<p><strong>What I have tried</strong></p>\n\n<p>I created a rolling average class that keeps the response times of the last X number of responses and can give the average at any point. Then when each response is received I compare its response time to the average. If the response time is equal or less than the average I increase the number of allowed outstanding requests. If the current response time is greater than the average I decrease allowed outstanding requests.</p>\n\n<p>This approach worked somewhat in scaling up but I had cases where the average just grew over time and allowed more and more outstanding requests which brought everything to a crawl. </p>\n\n<p>I have an implementation question on stackoverflow if you want more details on how I am doing this in code minus the rolling average part.</p>\n\n<p><a href=\"http://stackoverflow.com/q/30263716/1168353\">http://stackoverflow.com/q/30263716/1168353</a></p>\n\n<p>I have been using a mocked out version of the server that just sleeps a thread before returning a response. I pick a \"bestWaitSeconds\" that is the fastest time it can return and a \"MaxRequestsBeforeDegradation\" that determines the maximum number of requests before times increase, anything below that returns bestWaitSeconds. The degradation formula looks like the below and only applies when \"currentRequests\" is more than MaxRequestsBeforeDegradation.</p>\n\n<p>secondsToWait = (currentRequests - MaxRequestsBeforeDegradation) * (r.NextDouble() + .5) * bestWaitSeconds;</p>\n\n<p>The random is just a way to apply the unknown return time stated in the problem. Times do go well above 90 seconds when the server is overloaded. This formula isn't exactly what the server does but it conveys the idea I think.</p>\n\n<p>So basically the algorithm needs to get as close to MaxRequestsBeforeDegradation as possible. In the real case that MaxRequestsBeforeDegradation would change over long amounts of time so the algorithm also needs to adapt and explore up and down to continually know where the best number of outstanding requests is. Hope this helps.</p>\n\n<p><strong>Summary</strong></p>\n\n<p>How can I dynamically find the optimal number of outstanding requests allowed at a given moment to get the greatest throughput, given only a history of response times?</p>\n",
+   "ViewCount": 1046,
+   "Tags": "<algorithms><computer-networks><communication-protocols>",
+   "CommentCount": 7,
+   "AnswerCount": 2,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>I have an undirected graph, whose nodes have some sorting order defined on \nthem.\nI have to split it into subgraphs such none of the subgraphs have any cycle.\nI am trying the following procedure</p>\n\n<pre><code>listOfSubGraphs = empty\ncurrentSubGraph = empty\nfor each node do\n    if \"node + currentSubGraph\" do not form a cycle\n        add node to currentSubGraph\n    else  \n        add currentSubGraph to listOfSubGraphs\n        currentSubGraph = empty\n    end if\n end for\n</code></pre>\n\n<p>Is there a standard algorithm or better way to do this?</p>\n\n<p>The context for the problem is thus</p>\n\n<p>The graph is a map, with nodes as towns, and weighted edges as distance between towns. I need to convert the graph data into a <em>.dot</em> file for rendering.<br>\nI want to maintain the relative positions of the towns, in the resulting <em>.dot</em> diagram consistent with ground reality. I will do this by using rank feature of <em>.dot</em>.<br>\nI need to group the nodes such that those with similar longitude are in the same group, and assign them same rank. Adding a node that causes a cycle will be pushed to the next <em>.dot</em> rank (subtree)</p>\n",
+   "ViewCount": 87,
+   "Tags": "<algorithms><graphs>",
+   "CommentCount": 4,
+   "AnswerCount": 0,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>What is supposed to be the right result of an SCC algorithm running on a DAG. \nshould it return \"no components\" or \"there are V components of size 1\"?</p>\n\n<p>I suspect it will return the latter (since it will start with the last sink, and then go back and mark each single sized vertex as a component, since each DFS will be of a single node before it can continue)</p>\n\n<p>But is this a convention? E.g. if a treat SCC as a \"great way to find if a graph has cycles\" then I would expect it to return an empty result if there are none. e.g. components of size 1, who don't have a self-loop, don't really \"go from A to A\". is there a SCC variant that is more explicitly \"find all groups that has cycles in them\"? (e.g. is there a named variation) </p>\n\n<p>Or what I'm looking for is basically \"run SCC, then remove all components of size 1, and you got yourself a cycle detector, e.g. if after you do that you end up with no components, then your graph is a DAG\" </p>\n\n<p>Is there a name for that special SCC case? (assuming my understanding in the beginning of the question is correct) </p>\n",
+   "ViewCount": 142,
+   "Tags": "<graph-theory><terminology><dag>",
+   "CommentCount": 0,
+   "AnswerCount": 1,
+   "creationTime": 5
+ }]}}

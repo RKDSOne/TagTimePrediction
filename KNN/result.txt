@@ -1,0 +1,67 @@
+Test Tags - <p-vs-np>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+Word is p or asymptotics
+Accuracy Inc 1
+------------------------------------------------------
+Test Tags - <programming-languages><semantics><imperative-programming><denotational-semantics>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+Word is denotational or notation
+Accuracy Inc 2
+------------------------------------------------------
+Test Tags - <graphs><combinatorics><hamiltonian-path><square-grid><hamiltonian-circuit>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+------------------------------------------------------
+Test Tags - <formal-languages><turing-machines><reductions><undecidability>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+------------------------------------------------------
+Test Tags - <np-complete><optimization><decision-problem><np>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+------------------------------------------------------
+Test Tags - <communication-protocols>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+------------------------------------------------------
+Test Tags - <algorithms><computer-architecture><cpu-cache><memory-hardware><memory-access>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+Word is algorithms or algorithms
+Accuracy Inc 3
+------------------------------------------------------
+Test Tags - <algorithms><time-complexity><efficiency>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+Word is algorithms or algorithms
+Accuracy Inc 4
+------------------------------------------------------
+Test Tags - <formal-languages><computability><context-free><computation-models><context-sensitive>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+------------------------------------------------------
+Test Tags - <distributed-systems><synchronization>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+------------------------------------------------------
+Test Tags - <cryptography><correctness-proof><number-theory><security>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+------------------------------------------------------
+Test Tags - <algorithms><matching>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+Word is algorithms or algorithms
+Accuracy Inc 5
+------------------------------------------------------
+Test Tags - <data-structures><search-trees><dictionaries>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+------------------------------------------------------
+Test Tags - <algorithms><computer-networks><communication-protocols>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+Word is algorithms or algorithms
+Accuracy Inc 6
+------------------------------------------------------
+Test Tags - <algorithms><graphs>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+Word is algorithms or algorithms
+Accuracy Inc 7
+------------------------------------------------------
+Test Tags - <graph-theory><terminology><dag>
+Train Tags - <algorithms><terminology><asymptotics><landau-notation><reference-question>
+Word is terminology or terminology
+Accuracy Inc 8
+------------------------------------------------------
+Correct prediction - 8
+Data set length - 16
+Accuracy - 50.0

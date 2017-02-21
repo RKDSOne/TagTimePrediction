@@ -1,0 +1,310 @@
+{
+   "posts": 
+   {
+      "#text": "\n  ", 
+      "row": 
+ [
+ {
+   "Body": "<p>The set difference operator (e.g., <code>EXCEPT</code> in some SQL variants) is one of the many fundamental operators of relational algebra. However, there are some databases that do not support the set difference operator directly, but which support <code>LEFT JOIN</code> (a kind of outer join), and in practice this can be used instead of a set difference operation to achieve the same effect.</p>\n\n<p>Does this mean that the expressive power of a query language is the same even without the set difference operator, so long as the <code>LEFT JOIN</code> operator is maintained? How would one prove this fact?</p>\n",
+   "ViewCount": 416,
+   "Tags": "<database-theory><relational-algebra><finite-model-theory>",
+   "CommentCount": 1,
+   "AnswerCount": 2,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>In a standard algorithms course we are taught that <strong>quicksort</strong> is $O(n \\log n)$ on average and $O(n^2)$ in the worst case. At the same time, other sorting algorithms are studied which are $O(n \\log n)$ in the worst case (like <strong>mergesort</strong> and <strong>heapsort</strong>), and even linear time in the best case (like <strong>bubblesort</strong>) but with some additional needs of memory.</p>\n\n<p>After a quick glance at <a href=\"http://en.wikipedia.org/wiki/Sorting_algorithm#Comparison_of_algorithms\">some more running times</a> it is natural to say that quicksort <strong>should not</strong> be as efficient as others.</p>\n\n<p>Also, consider that students learn in basic programming courses that recursion is not really good in general because it could use too much memory, etc. Therefore (and even though this is not a real argument), this gives the idea that quicksort might not be really good because it is a recursive algorithm.</p>\n\n<p><strong>Why, then, does quicksort outperform other sorting algorithms in practice?</strong> Does it have to do with the structure of <em>real-world data</em>? Does it have to do with the way memory works in computers? I know that some memories are way faster than others, but I don't know if that's the real reason for this counter-intuitive performance (when compared to theoretical estimates).</p>\n\n<hr>\n\n<p><strong>Update 1:</strong> a canonical answer is saying that the constants involved in the $O(n\\log n)$ of the average case are smaller than the constants involved in other $O(n\\log n)$ algorithms. However, I have yet to see a proper justification of this, with precise calculations instead of intuitive ideas only.</p>\n\n<p>In any case, it seems like the real difference occurs, as some answers suggest, at memory level, where implementations take advantage of the internal structure of computers, using, for example, that cache memory is faster than RAM. The discussion is already interesting, but I'd still like to see more detail with respect to memory-management, since it appears that <em>the</em> answer has to do with it.</p>\n\n<hr>\n\n<p><strong>Update 2:</strong> There are several web pages offering a comparison of sorting algorithms, some fancier than others (most notably <a href=\"http://www.sorting-algorithms.com/\">sorting-algorithms.com</a>). Other than presenting a nice visual aid, this approach does not answer my question.</p>\n",
+   "ViewCount": 172527,
+   "Tags": "<algorithms><sorting>",
+   "CommentCount": 13,
+   "AnswerCount": 11,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>Many operating systems references say that with cooperative (as opposed to preemptive) multitasking, a process keeps the CPU until it explicitly voluntarily suspends itself.  If a running process performs an I/O request that cannot be immediately satisfied (e.g., requests a key stroke that is not yet available), does the scheduler suspend it, or does it really keep the CPU until the request can be serviced?</p>\n\n<p>[Edited to replace \"blocks on i/o\" with \"performs an I/O request that cannot be immediately satisfied.\"]</p>\n",
+   "ViewCount": 1145,
+   "Tags": "<operating-systems><process-scheduling>",
+   "CommentCount": 2,
+   "AnswerCount": 4,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>When placing geometric objects in a quadtree (or octree), you can place objects that are larger than a single node in a few ways:</p>\n\n<ol>\n<li>Placing the object's reference in every leaf for which it is contained</li>\n<li>Placing the object's reference in the deepest node for which it is fully contained</li>\n<li>Both #1 and #2</li>\n</ol>\n\n<p>For example:</p>\n\n<p><img src=\"http://i.stack.imgur.com/Z2Bj7.jpg\" alt=\"enter image description here\"></p>\n\n<p>In this image, you could either place the circle in all four of the leaf nodes (method #1) or in just the root node (method #2) or both (method #3).</p>\n\n<p>For the purposes of querying the quadtree, which method is more commonplace and why?</p>\n",
+   "ViewCount": 149,
+   "Tags": "<graphics><data-structures><computational-geometry>",
+   "CommentCount": 5,
+   "AnswerCount": 2,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>I have a set of pairs. Each pair is of the form (x,y) such that x,y belong to integers from the range <code>[0,n)</code>.</p>\n\n<p>So, if the n is 4, then I have the following pairs:</p>\n\n<pre><code>(0,1) (0,2) (0,3)\n(1,2) (1,3) \n(2,3) \n</code></pre>\n\n<p>I already have the pairs. Now, I have to build a combination using <code>n/2</code> pairs such that none of the integers are repeated (in other words, each integer appears at least once in the final combination). Following are the examples of a correct and an incorrect combination for better understanding</p>\n\n<pre><code> 1. (0,1)(1,2) [Invalid as 3 does not occur anywhere]\n 2. (0,2)(1,3) [Correct]\n 3. (1,3)(0,2) [Same as 2]\n</code></pre>\n\n<p>Can someone suggest me a way to generate all possible combinations, once I have the pairs.</p>\n",
+   "ViewCount": 4526,
+   "Tags": "<algorithms>",
+   "CommentCount": 8,
+   "AnswerCount": 6,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>Seeing that in the <a href=\"http://en.wikipedia.org/wiki/Chomsky_hierarchy\">Chomsky Hierarchy</a> Type 3 languages can be recognised by a state machine with no external memory (i.e., a finite automaton), Type 2 by a state machine with a <em>single</em> stack (i.e. a push-down automaton) and Type 0 by a state machine with <em>two</em> stacks (or, equivalently, a tape, as is the case for Turing Machines), how do Type 1 languages fit into this picture? And what advantages does it bring to determine that a language is not only Type 0 but Type 1?</p>\n",
+   "ViewCount": 2161,
+   "Tags": "<formal-languages><applied-theory><computability><automata><formal-grammars>",
+   "CommentCount": 9,
+   "AnswerCount": 9,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p>Considering this pseudo-code of a bubblesort:</p>\n\n<pre><code>FOR i := 0 TO arraylength(list) STEP 1  \n    switched := false\n    FOR j := 0 TO arraylength(list)-(i+1) STEP 1\n        IF list[j] &gt; list[j + 1] THEN\n            switch(list,j,j+1)\n            switched := true\n        ENDIF\n    NEXT\n    IF switched = false THEN\n        break\n    ENDIF\nNEXT\n</code></pre>\n\n<p>What would be the basic ideas I would have to keep in mind to evaluate the average time-complexity? I already accomplished calculating the worst and best cases, but I am stuck  deliberating how to evaluate the average complexity of the inner loop, to form the equation. </p>\n\n<p>The worst case equation is:</p>\n\n<p>$$\n\\sum_{i=0}^n \\left(\\sum_{j=0}^{n -(i+1)}O(1) + O(1)\\right) = O(\\frac{n^2}{2} + \\frac{n}{2}) = O(n^2)\n$$</p>\n\n<p>in which the inner sigma represents the inner loop, and the outer sigma represents the outer loop. I think that I need to change both sigmas due to the \"if-then-break\"-clause, which might affect the outer sigma but also due to the if-clause in the inner loop, which will affect the actions done during a loop (4 actions + 1 comparison if true, else just 1 comparison).</p>\n\n<p>For clarification on the term average-time: This sorting algorithm will need different time on different lists (of the same length), as the algorithm might need more or less steps through/within the loops until the list is completely in order. I try to find a mathematical (non statistical way) of evaluating the average of those rounds needed. </p>\n\n<p>For this I expect any order to be of the same possibility.</p>\n",
+   "ViewCount": 11940,
+   "Tags": "<algorithms><time-complexity><sorting><average-case>",
+   "CommentCount": 16,
+   "AnswerCount": 3,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p>Let's consider a memory segment (whose size can grow or shrink, like a file, when needed) on which you can perform two basic memory allocation operations involving fixed size blocks:</p>\n\n<ul>\n<li>allocation of one block</li>\n<li>freeing a previously  allocated block which is not used anymore.</li>\n</ul>\n\n<p>Also, as a requirement, the memory management system is not allowed to move around currently allocated blocks: their index/address must remain unchanged.</p>\n\n<p>The most naive memory management algorithm would increment a global counter (with initial value 0) and use its new value as an address for the next allocation.\nHowever this will never allow to shorten the segment when only a few allocated blocks remain.</p>\n\n<p>Better approach: Keep the counter, but maintain a list of deallocated blocks (which can be done in constant time) and use it as a source for new allocations as long as it's not empty.</p>\n\n<p>What next? Is there something clever that can be done, still with constraints of constant time allocation and deallocation, that would keep the memory segment as short as possible?</p>\n\n<p>(A goal could be to track the currently non-allocated block with the smallest address, but it doesn't seem to be feasible in constant time…)</p>\n",
+   "ViewCount": 700,
+   "Tags": "<time-complexity><memory-allocation><operating-systems>",
+   "CommentCount": 9,
+   "AnswerCount": 3,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p><a href=\"http://en.wikipedia.org/wiki/Rice%27s_theorem\">Rice's theorem</a> tell us that the only <em>semantic</em> properties of <a href=\"http://en.wikipedia.org/wiki/Turing_machines\">Turing Machines</a> (i.e. the properties of the function computed by the machine) that we can decide are the two trivial properties (i.e. always true and always false).</p>\n\n<p>But there are other properties of Turing Machines that are not decidable. For example, the property that there is an unreachable state in a given Turing machine is undecidable$^{\\dagger}$.</p>\n\n<p>Is there a similar theorem to Rice's theorem that categorizes the decidability of similar properties? I don't have a precise definition. Any known theorem that covers the example I have given would be interesting for me.</p>\n\n<p>$^\\dagger$ it is easy to prove that this set is undecidable using <a href=\"http://en.wikipedia.org/wiki/Kleene%27s_recursion_theorem\">Kleene's Recursion/Fixed Point theorems</a>.</p>\n",
+   "ViewCount": 931,
+   "Tags": "<computability><undecidability>",
+   "CommentCount": 4,
+   "AnswerCount": 1,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p>People often say that <a href=\"https://en.wikipedia.org/wiki/LR_parser\">LR(k)</a> parsers are more powerful than <a href=\"https://en.wikipedia.org/wiki/LL_parser\">LL(k)</a> parsers. These statements are vague most of the time; in particular, should we compare the classes for a fixed $k$ or the union over all $k$? So how is the situation really? In particular, I am interested in how LL(*) fits in.</p>\n\n<p>As far as I know, the respective sets of grammars LL and LR parsers accept are orthogonal, so let us talk about the languages generated by the respective sets of grammars. Let $LR(k)$ denote the class of languages generated by grammars that can be parsed by an $LR(k)$ parser, and similar for other classes.</p>\n\n<p>I am interested in the following relations:</p>\n\n<ul>\n<li>$LL(k) \\overset{?}{\\subseteq} LR(k)$</li>\n<li>$\\bigcup_{i=1}^{\\infty} LL(k) \\overset{?}{\\subseteq} \\bigcup_{i=1}^{\\infty} LR(k)$</li>\n<li>$\\bigcup_{i=1}^{\\infty} LL(k) \\overset{?}{=} LL(*)$</li>\n<li>$LL(*) \\overset{?}{\\circ} \\bigcup_{i=1}^{\\infty} LR(k)$</li>\n</ul>\n\n<p>Some of these are probably easy; my goal is to collect a \"complete\" comparison. References are appreciated.</p>\n",
+   "ViewCount": 7089,
+   "Tags": "<formal-languages><formal-grammars><parsers><reference-question>",
+   "CommentCount": 2,
+   "AnswerCount": 1,
+   "creationTime": 1
+ },
+ {
+   "Body": "<p>In most introductory algorithm classes, notations like $O$ (Big O) and $\\Theta$ are introduced, and a student would typically learn to use one of these to find the time complexity.</p>\n\n<p>However, there are other notations, such as $o$, $\\Omega$ and $\\omega$. Are there any specific scenarios where one notation would be preferable to another?</p>\n",
+   "ViewCount": 10642,
+   "Tags": "<algorithms><terminology><asymptotics><landau-notation><reference-question>",
+   "CommentCount": 1,
+   "AnswerCount": 3,
+   "creationTime": 1
+ },
+ {
+   "Body": "<p>Many textbooks cover intersection types in the lambda-calculus. The typing rules for intersection can be defined as follows (on top of the simply typed lambda-calculus with subtyping):</p>\n\n<p>$$\n\\dfrac{\\Gamma \\vdash M : T_1 \\quad \\Gamma \\vdash M : T_2}\n      {\\Gamma \\vdash M : T_1 \\wedge T_2}\n      (\\wedge I)\n\\qquad\\qquad\n\\dfrac{}\n      {\\Gamma \\vdash M : \\top}\n      (\\top I)\n$$</p>\n\n<p>Intersection types have interesting properties with respect to normalization:</p>\n\n<ul>\n<li>A lambda-term can be typed without using the $\\top I$ rule iff it is strongly normalizing.</li>\n<li>A lambda-term admits a type not containing $\\top$ iff it has a normal form.</li>\n</ul>\n\n<p>What if instead of adding intersections, we add unions?</p>\n\n<p>$$\n\\dfrac{\\Gamma \\vdash M : T_1}\n      {\\Gamma \\vdash M : T_1 \\vee T_2}\n      (\\vee I_1)\n\\qquad\\qquad\n\\dfrac{\\Gamma \\vdash M : T_2}\n      {\\Gamma \\vdash M : T_1 \\vee T_2}\n      (\\vee I_2)\n$$</p>\n\n<p>Does the lambda-calculus with simple types, subtyping and unions have any interesting similar property? How can the terms typable with union be characterized?</p>\n",
+   "ViewCount": 333,
+   "Tags": "<lambda-calculus><type-theory><logic>",
+   "CommentCount": 2,
+   "AnswerCount": 2,
+   "creationTime": 1
+ },
+ {
+   "Body": "<p>I want to generate a completely random <a href=\"http://en.wikipedia.org/wiki/Sudoku\">Sudoku</a>.</p>\n\n<p>Define a Sudoku grid as a $9\\times9$ grid of integers between $1$ and $9$ where some elements can be omitted. A grid is a valid puzzle if there is a <strong>unique</strong> way to complete it to match the Sudoku constraints (each line, column and aligned $3\\times3$ square has no repeated element) and it is minimal in that respect (i.e. if you omit any more element the puzzle has multiple solutions).</p>\n\n<p>How can I generate a random Sudoku puzzle, such that all Sudoku puzzles are equiprobable?</p>\n",
+   "ViewCount": 3015,
+   "Tags": "<algorithms><random><sudoku>",
+   "CommentCount": 2,
+   "AnswerCount": 1,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>I have observed that there are two different types of states in branch prediction.</p>\n\n<ol>\n<li><p>In superscalar execution, where the branch prediction is very important, and it is mainly in execution delay rather than fetch delay.</p></li>\n<li><p>In the instruction pipeline, where the fetching is more problem since the instructions do not actually get executed till later.</p></li>\n</ol>\n\n<p>Which of these is very important (as in which of these really matters in the CPU now-a-days)? If both are equally important or in case the second one is more important then Why do we not have two instruction pipeline (probably of half the length ) and then depending on the branches, just choose one of them and then again start the population from the beginning?</p>\n",
+   "ViewCount": 329,
+   "Tags": "<cpu-pipelines><computer-architecture>",
+   "CommentCount": 1,
+   "AnswerCount": 2,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>Did the <a href=\"http://en.wikipedia.org/wiki/Smoothed_analysis\">smoothed analysis</a> find its way into main stream analysis of algorithms? Is it common for algorithm designers to apply smoothed analysis to their algorithms?</p>\n",
+   "ViewCount": 261,
+   "Tags": "<algorithms><complexity-theory><algorithm-analysis>",
+   "CommentCount": 6,
+   "AnswerCount": 2,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>Is there any evidence suggesting that time spent on writing up, or thinking about the requirements will have any effect on the development time? Study done by Standish (1995) suggests that incomplete requirements partially (13.1%) contributed to the failure of the projects. Are there any studies done which show that time spent on requirement analysis will have any effect on development time of a project, or how successful the project will be.</p>\n",
+   "ViewCount": 1681,
+   "Tags": "<software-engineering>",
+   "CommentCount": 4,
+   "AnswerCount": 2,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>Let's assume that $\\mathsf{P} \\neq \\mathsf{NP}$. $\\mathsf{NPI}$ is the class of problems in $\\mathsf{NP}$ which are neither in $\\mathsf{P}$ nor in $\\mathsf{NP}$-hard. You can find a list of problems conjectured to be $\\mathsf{NPI}$ <a href=\"http://cstheory.stackexchange.com/questions/79/problems-between-p-and-npc/\">here</a>. </p>\n\n<p><a href=\"http://cstheory.stackexchange.com/questions/799/generalized-ladners-theorem\">Ladner's theorem</a> tells us that if $\\mathsf{NP}\\neq\\mathsf{P}$ then there is an infinite hierarchy of $\\mathsf{NPI}$ problems, i.e. there are $\\mathsf{NPI}$ problems which are harder than other $\\mathsf{NPI}$ problems.</p>\n\n<blockquote>\n  <p>I am looking for candidates of such problems, i.e. I am interested in pairs of problems<br>\n  - $A,B \\in \\mathsf{NP}$,<br>\n  - $A$ and $B$ are conjectured to be $\\mathsf{NPI}$,<br>\n  - $A$ is known to reduce to $B$,<br>\n  - but there are no known reductions from $B$ to $A$.</p>\n</blockquote>\n\n<p>Even better if there are arguments for supporting these, e.g. there are results that $B$ does not reduce to $A$ assuming some conjectures in complexity theory or cryptography.</p>\n\n<p>Are there any <em>natural</em> examples of such problems?</p>\n\n<p>Example: Graph Isomorphism problem and Integer Factorization problem are conjectured to be in $\\mathsf{NPI}$ and there are argument supporting these conjectures. Are there any decision problems harder than these two but not known to be $\\mathsf{NP}$-hard?</p>\n",
+   "ViewCount": 990,
+   "Tags": "<complexity-theory><np-hard>",
+   "CommentCount": 18,
+   "AnswerCount": 1,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>I am reading <a href=\"http://www.google.ch/url?sa=t&amp;rct=j&amp;q=leap%20search&amp;source=web&amp;cd=5&amp;ved=0CE8QFjAE&amp;url=http://dl.acm.org/ft_gateway.cfm?id=1376662&amp;type=pdf&amp;ei=sSVXT569JYjkiAL2hLyiCw&amp;usg=AFQjCNEOkxyk31CeifLNr72Cv_it7IATbg&amp;cad=rja\">Mining Significant Graph Patterns by Leap Search</a> (Yan et al., 2008), and I am unclear on how their technique translates to the unlabeled setting, since $p$ and $q$ (the frequency functions for positive and negative examples, respectively) are omnipresent.</p>\n\n<p>On page 436 however, the authors clearly state that \"In the following presentation, we are going to use the second setting (Figure 3) to illustrate the main idea. Nevertheless, the proposed technique can also be applied to the 1st [unlabeled] setting.\"</p>\n",
+   "ViewCount": 104,
+   "Tags": "<data-mining>",
+   "CommentCount": 3,
+   "AnswerCount": 0,
+   "creationTime": 3
+ },
+ {
+   "Body": "<p>EPAL, the language of even palindromes, is defined as the language generated by the following unambiguous context-free grammar:</p>\n\n<blockquote>\n  <p>$S \\rightarrow a a$</p>\n  \n  <p>$S \\rightarrow b b$</p>\n  \n  <p>$S \\rightarrow a S a$</p>\n  \n  <p>$S \\rightarrow b S b$</p>\n</blockquote>\n\n<p>EPAL is the 'bane' of many parsing algorithms: I have yet to encounter any parsing algorithm for unambiguous CFGs that can parse any grammar describing the language. It is often used to show that there are unambiguous CFGs that cannot be parsed by a particular parser. This inspired my question:</p>\n\n<blockquote>\n  <p>Is there some parsing algorithm accepting only unambiguous CFGs that works on EPAL?</p>\n</blockquote>\n\n<p>Of course, one can design an ad-hoc two-pass parser for the grammar that parses the language in linear time. I'm interested in parsing methods that have not been designed specifically with EPAL in mind.</p>\n",
+   "ViewCount": 207,
+   "Tags": "<formal-languages><formal-grammars><parsers>",
+   "CommentCount": 9,
+   "AnswerCount": 1,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>Assume a computer has a precise clock which is not initialized. That is, the time on the computer's clock is the real time plus some constant offset. The computer has a network connection and we want to use that connection to determine the constant offset $B$.</p>\n\n<p>The simple method is that the computer sends a query to a time server, noting the local time $B + C_1$. The time server receives the query at a time $T$ and sends a reply containing $T$ back to the client, which receives it at a time $B + C_2$. Then $B + C_1 \\le T \\le B + C_2$, i.e. $T - C_2 \\le B \\le T - C_1$.</p>\n\n<p>If the network transmission time and the server processing time are symmetric, then $B = T - \\dfrac{C_1 + C_2}{2}$. As far as I know, <a href=\"http://en.wikipedia.org/wiki/Network_Time_Protocol\">NTP</a>, the time synchronization protocol used in the wild, operates on this assumption.</p>\n\n<p>How can the precision be improved if the delays are not symmetric? Is there a way to measure this asymmetry in a typical Internet infrastructure?</p>\n",
+   "ViewCount": 5012,
+   "Tags": "<clocks><distributed-systems><computer-networks>",
+   "CommentCount": 9,
+   "AnswerCount": 5,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>Consider an inductive type which has some recursive occurrences in a nested, but strictly positive location. For example, trees with finite branching with nodes using a generic list data structure to store the children.</p>\n\n<pre><code>Inductive LTree : Set := Node : list LTree -&gt; LTree.\n</code></pre>\n\n<p>The naive way of defining a recursive function over these trees by recursing over trees and lists of trees does not work. Here's an example with the <code>size</code> function that computes the number of nodes.</p>\n\n<pre><code>Fixpoint size (t : LTree) : nat := match t with Node l =&gt; 1 + (size_l l) end\nwith size_l (l : list LTree) : nat := match l with\n    | nil =&gt; 0\n    | cons h r =&gt; size h + size_l r\n  end.\n</code></pre>\n\n<p>This definition is ill-formed (error message excerpted):</p>\n\n<pre><code>Error:\nRecursive definition of size_l is ill-formed.\nRecursive call to size has principal argument equal to\n\"h\" instead of \"r\".\n</code></pre>\n\n<p>Why is the definition ill-formed, even though <code>r</code> is clearly a subterm of <code>l</code>? Is there a way to define recursive functions on such a data structure?</p>\n\n<hr>\n\n<p>If you aren't fluent in Coq syntax: <code>LTree</code> is an inductive type corresponding to the following grammar.</p>\n\n<p>$$\\begin{align}\n  \\mathtt{LTree} ::= &amp; \\\\\n  \\vert &amp; \\mathtt{list}(\\mathtt{LTree}) \\\\\n\\end{align}$$</p>\n\n<p>We attempt to define the <code>size</code> function by induction over trees and lists. In OCaml, that would be:</p>\n\n<pre><code>type t = Node of t list\nlet rec size = function Node l -&gt; 1 + size_l l\nand size_l = function [] -&gt; 0\n                    | h::r -&gt; size h + size_l r\n</code></pre>\n",
+   "ViewCount": 1320,
+   "Tags": "<logic><coq><type-theory><recursion><proof-assistants>",
+   "CommentCount": 4,
+   "AnswerCount": 2,
+   "creationTime": 4
+ },
+ {
+   "Body": "<p>I need to create a recursive algorithm to see if a binary tree is a binary search tree as well as count how many complete branches are there (a parent node with both left and right children nodes) with an assumed global counting variable. This is an assignment for my data structures class. </p>\n\n<p>So far I have</p>\n\n<pre><code>void BST(tree T) {\n   if (T == null) return\n   if ( T.left and T.right) {\n      if (T.left.data &lt; T.data or T.right.data &gt; T.data) {\n        count = count + 1\n        BST(T.left)\n        BST(T.right)\n      }\n   }\n}\n</code></pre>\n\n<p>But I can't really figure this one out. I know that this algorithm won't solve the problem because the count will be zero if the second if statement isn't true.</p>\n\n<p>Could anyone help me out on this one? </p>\n",
+   "ViewCount": 3283,
+   "Tags": "<algorithms><recursion><trees>",
+   "CommentCount": 14,
+   "AnswerCount": 3,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>It's a known fact that every LTL formula can be expressed by a Büchi $\\omega$-automaton. But, apparently, Büchi automata are a more powerful, expressive model. I've heard somewhere that Büchi automata are equivalent to linear-time $\\mu$-calculus (that is, $\\mu$-calculus with usual fixpoints and only one temporal operator: $\\mathbf{X}$). </p>\n\n<p>Is there an algorithm (constructive proof) of this equality?</p>\n",
+   "ViewCount": 648,
+   "Tags": "<logic><automata><formal-methods><linear-temporal-logic><buchi-automata>",
+   "CommentCount": 13,
+   "AnswerCount": 2,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p>Let us call a context-free language deterministic if and only if it can be accepted by a deterministic push-down automaton, and nondeterministic otherwise.</p>\n\n<p>Let us call a context-free language inherently ambiguous if and only if all context-free grammars which generate the language are ambiguous, and unambiguous otherwise.</p>\n\n<p>An example of a deterministic, unambiguous language is the language: $$\\{a^{n}b^{n} \\in \\{a, b\\}^{*} | n \\ge 0\\}$$\nAn example of a nondeterministic, unambiguous language is the language: \n$$\\{w \\in \\{a, b\\}^{*} | w = w^{R}\\}$$</p>\n\n<p>From <a href=\"http://en.wikipedia.org/wiki/Ambiguous_grammar#Inherently_ambiguous_languages\">Wikipedia</a>, an example of an inherently ambiguous context-free language is the following union of context-free languages, which must also be context-free: \n$$L = \\{a^{n}b^{m}c^{m}d^{n} \\in \\{a, b, c, d\\}^{*} | n, m \\ge 0\\} \\cup \\{a^{n}b^{n}c^{m}d^{m} \\in \\{a, b, c, d\\}^{*} | n, m \\ge 0\\}$$</p>\n\n<p>Now for the questions:</p>\n\n<ol>\n<li>Is it known whether there exists a deterministic, inherently ambiguous context-free language? If so, is there an (easy) example?</li>\n<li>Is it known whether there exists a nondeterministic, inherently ambiguous context-free language? If so, is there an (easy) example?</li>\n</ol>\n\n<p>Clearly, since an inherently ambiguous context-free language exists ($L$ is an example), the answer to one of these questions is easy, if it is known whether $L$ is deterministic or nondeterministic. I also assume that it's true that if there's a deterministic one, there's bound to be a nondeterministic one as well... but I've been surprised before. References are appreciated, and apologies in advance if this is a well-known, celebrated result (in which case, I'm completely unaware of it).</p>\n",
+   "ViewCount": 3215,
+   "Tags": "<formal-languages><automata><formal-grammars><pushdown-automata>",
+   "CommentCount": 0,
+   "AnswerCount": 2,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p><em>See the end of this post for some clarification on the definition(s) of min-heap automata.</em></p>\n\n<p>One can imagine using a variety of data structures for storing information for use by state machines. For instance, push-down automata store information in a stack, and Turing machines use a tape. State machines using queues, and ones using two multiple stacks or tapes, have been shown to be equivalent in power to Turing machines.</p>\n\n<p>Imagine a min-heap machine. It works exactly like a push-down automaton, with the following exceptions:</p>\n\n<ol>\n<li>Instead of getting to look at the last thing you added to the heap, you only get to look at the smallest element (with the ordering defined on a per-machine basis) currently on the heap.</li>\n<li>Instead of getting to remove the last thing you added to the heap, you only get to remove one of the smallest element (with the ordering defined on a per-machine basis) currently on the heap.</li>\n<li>Instead of getting to add an element to the top of the heap, you can only add an element to the heap, with its position being determined according to the other elements in the heap (with the ordering defined on a per-machine basis).</li>\n</ol>\n\n<p>This machine can accept all regular languages, simply by not using the heap. It can also accept the language $\\displaystyle \\{a^{n}b^{n} \\in \\{a, b\\}^{*} \\mid n \\ge 0\\}$ by adding $a$'s to the heap, and removing $a$'s from the heap when it reads $b$'s. It can accept a variety of other context-free languages. However, it cannot accept, for instance, $\\displaystyle \\{w \\in \\{a, b\\}^{*} \\mid w = w^{R}\\}$ (stated without proof). EDIT: or can it? I don't think it can, but I've been surprised before, and I'm sure I'll keep being surprised when my assumptions to keep making of me an... well.</p>\n\n<blockquote>\n  <p>Can it accept any context-sensitive or Turing-complete languages?</p>\n</blockquote>\n\n<p>More generally, what research, if any, has been pursued in this direction? What results are there, if any? I am also interested in other varieties of exotic state machines, possibly those using other data structures for storage or various kinds of restrictions on access (e.g., how LBAs are restricted TMs). References are appreciated. I apologize in advance if this question is demonstrating ignorance.</p>\n\n<hr>\n\n<p><strong>Formal Definition:</strong></p>\n\n<p>I provide some more detailed definitions of min-heap automata here in order to clarify further discussion in questions which reference this material.</p>\n\n<p>We define a <em>type-1 nondeterministic min-heap automaton</em> as a 7-tuple $$(Q, q_0, A, \\Sigma, \\Gamma, Z_0, \\delta)$$ where...</p>\n\n<ol>\n<li>$Q$ is a finite, non-empty set of states;</li>\n<li>$q_0 \\in Q$ is the initial state;</li>\n<li>$A \\subseteq Q$ is the set of accepting states;</li>\n<li>$\\Sigma$ is a finite, non-empty input alphabet;</li>\n<li>$\\Gamma$ is a finite, non-empty input alphabet, where the weight of a symbol $\\gamma \\in \\Gamma$, $w(\\gamma) \\in \\mathbb{N}$, is such that $w(\\gamma_1) = w(\\gamma_2) \\iff \\gamma_1 = \\gamma_2$;</li>\n<li>$Z_0 \\notin \\Gamma$ is the special bottom-of-the-heap symbol;</li>\n<li>$\\delta : Q \\times (\\Sigma \\cup \\{\\epsilon\\}) \\times (\\Gamma \\cup \\{Z_0\\}) \\rightarrow \\mathcal{P}({Q \\times \\Gamma^*})$ is the transition function.</li>\n</ol>\n\n<p>The transition function works by assuming an initially empty heap consisting of only $Z_0$. The transition function may add to the heap an arbitrary collection (finite, but possibly empty or with repeats) of elements $\\gamma_1, \\gamma_2, ..., \\gamma_k \\in \\Gamma$. Alternatively, the transition function may remove an instance of the element $\\gamma$ with the lowest weight $w(\\gamma)$ of all elements remaining on the heap (i.e., the element on top of the heap). The transition function may only use the top-most (i.e., of minimal weight) symbol instance in determining any given transition.</p>\n\n<p>Further, define a <em>type-1 deterministic min-heap automaton</em> to be a type-1 nondeterministic min-heap automaton which satisfies the following property: for all strings $x{\\sigma}y \\in \\Sigma$ such that $|x| = n$ and $\\sigma \\in \\Sigma$, $|\\delta^{n+1}(q_0, x{\\sigma}y, Z_0)| \\leq 1$.</p>\n\n<p>Define also a <em>type-2 nondeterministic min-heap automaton</em> exactly the same as a type-1 nondeterministic min-heap automaton, except for the following changes:</p>\n\n<ol>\n<li>$\\Gamma$ is a finite, non-empty input alphabet, where the weight of a symbol $\\gamma \\in \\Gamma$, $w(\\gamma) \\in \\mathbb{N}$, is such that $w(\\gamma_1) = w(\\gamma_2)$ does not necessarily imply $\\gamma_1 = \\gamma_2$; in other words, different heap symbols can have the same weight.</li>\n<li>When instances of distinct heap symbols with same weight are added to the heap, their relative order is preserved according to a last-in, first-out (LIFO) stack-like ordering.</li>\n</ol>\n\n<p>Thanks to Raphael for pointing out this more natural definition, which captures (and extends) the context-free languages. </p>\n\n<hr>\n\n<p><strong>Some results demonstrated so far:</strong></p>\n\n<ol>\n<li>Type-1 min-heap automata recognize a set of languages which is neither a subset nor a superset of the context-free languages. [<a href=\"http://cs.stackexchange.com/a/114/98\">1</a>,<a href=\"http://cs.stackexchange.com/a/115/98\">2</a>]</li>\n<li>Type-2 min-heap automata, by their definition, recognize a set of languages which is a proper superset of the context-free languages, as well as a proper superset of the languages accepted by type-1 min-heap automata.</li>\n<li>Languages accepted by type-1 min-heap automata appear to be closed under union, concatenation, and Kleene star, but not under complementation [<a href=\"http://cs.stackexchange.com/a/415/98\">1</a>], intersection, or difference;</li>\n<li>Languages accepted by type-1 nondeterministic min-heap automata appear to be a proper superset of languages accepted by type-1 deterministic min-heap automata.</li>\n</ol>\n\n<p>There may be a few other results I have missed. More results are (possibly) on the way.</p>\n\n<hr>\n\n<p><strong>Follow-up Questions</strong></p>\n\n<ol>\n<li><a href=\"http://cs.stackexchange.com/q/390/98\">Closure under reversal?</a> -- Open</li>\n<li><a href=\"http://cs.stackexchange.com/q/393/98\">Closure under complementation?</a> -- No!</li>\n<li><a href=\"http://cs.stackexchange.com/q/394/98\">Does nondeterminism increase power?</a> -- Yes?</li>\n<li><a href=\"http://cs.stackexchange.com/q/933/69\">Is $HAL \\subsetneq CSL$ for type-2?</a> -- Open</li>\n<li><a href=\"http://cs.stackexchange.com/q/934/69\">Does adding heaps increase power for type-1?</a> -- $HAL^1 \\subsetneq HAL^2 = HAL^k$ for $k &gt; 2$ (?)</li>\n<li><a href=\"http://cs.stackexchange.com/q/944/69\">Does adding a stack increase power for type-1?</a> -- Open</li>\n</ol>\n",
+   "ViewCount": 711,
+   "Tags": "<formal-languages><automata>",
+   "CommentCount": 3,
+   "AnswerCount": 2,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p>In her 1987 seminal paper Dana Angluin presents a polynomial time algorithm for learning a DFA from membership queries and theory queries (counterexamples to a proposed DFA).</p>\n\n<p>She shows that if you are trying to learn a minimal DFA with $n$ states, and your largest countexample is of length $m$, then you need to make $O(mn^2)$ membership-queries and at most $n - 1$ theory-queries.</p>\n\n<p>Have there been significant improvements on the number of queries needed to learn a regular set?</p>\n\n<hr>\n\n<h3>References and Related Questions</h3>\n\n<ul>\n<li><p>Dana Angluin (1987) \"Learning Regular Sets from Queries and Counterexamples\", Infortmation and Computation 75: 87-106</p></li>\n<li><p><a href=\"http://cstheory.stackexchange.com/q/10958/1037\">Lower bounds for learning in the membership query and counterexample model</a></p></li>\n</ul>\n",
+   "ViewCount": 1191,
+   "Tags": "<algorithms><learning-theory><machine-learning>",
+   "CommentCount": 4,
+   "AnswerCount": 2,
+   "creationTime": 1
+ },
+ {
+   "Body": "<p>Initially, <a href=\"http://en.wikipedia.org/wiki/Matroid\">Matroids</a> were introduced to generalize the notions of linear independence of a collection of subsets $E$ over some ground set $I$. Certain problems that contain this structure permit greedy algorithms to find optimal solutions. The concept of <a href=\"http://en.wikipedia.org/wiki/Greedoid\">Greedoids</a> was later introduced to generalize this structure to capture more problems that allow for optimal solutions to be found by greedy methods.</p>\n\n<p>How often do these structures arise in algorithm design? </p>\n\n<p>Furthermore, more often than not a greedy algorithm will not be able to fully capture what is necessary to find optimal solutions, but may still find very good approximate solutions (Bin Packing for example). Given that, is there a way to measure how \"close\" a problem is to a greedoid/matroid?</p>\n",
+   "ViewCount": 756,
+   "Tags": "<algorithms><combinatorics><optimization>",
+   "CommentCount": 0,
+   "AnswerCount": 1,
+   "creationTime": 1
+ },
+ {
+   "Body": "<p>In a <a href=\"http://www.youtube.com/watch?feature=player_embedded&amp;v=4S-sx5_cmLU#!\" rel=\"nofollow\">video</a> discussing the merits of <a href=\"http://en.wikipedia.org/wiki/Particle_filter\" rel=\"nofollow\">particle filters</a> for localization, it was implied that there is some ambiguity about the complexity cost of particle filter implementations.  Is this correct?  Could someone explain this?</p>\n",
+   "ViewCount": 456,
+   "Tags": "<computational-geometry><knowledge-representation><reasoning><statistics>",
+   "CommentCount": 4,
+   "AnswerCount": 1,
+   "creationTime": 1
+ },
+ {
+   "Body": "<p>In quantum computation, what is the equivalent model of a Turing machine? \nIt is quite clear to me how quantum <strong>circuits</strong> can be constructed out of quantum gates, but how can we define a quantum Turing machine (QTM) that can actually benefit from quantum effects, namely, perform on high-dimensional systems?</p>\n",
+   "ViewCount": 3149,
+   "Tags": "<quantum-computing><turing-machines><computation-models>",
+   "CommentCount": 4,
+   "AnswerCount": 2,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>Does SQL  need subqueries?</p>\n\n<p>Imagine a sufficiently generalized implementation of the structured query language for relation databases. Since the structure of the canonical SQL <code>SELECT</code> statement is actually pretty important for this to make sense, I don't appeal directly to relational algebra, but you could frame this in those terms by making appropriate restrictions on the form of expressions.</p>\n\n<p>An SQL <code>SELECT</code> query generally consists of a projection (the <code>SELECT</code> part) some number of <code>JOIN</code> operations (the <code>JOIN</code> part), some number of <code>SELECTION</code>  operations (in SQL, the <code>WHERE</code> clauses), and then set-wise operations (<code>UNION</code>, <code>EXCEPT</code>, <code>INTERSECT</code>, etc.), followed by another SQL <code>SELECT</code> query.</p>\n\n<p>Tables being joined can be the computed results of expressions; in other words, we can have a statement such as:</p>\n\n<pre><code>SELECT t1.name, t2.address\n  FROM table1 AS t1 \n  JOIN (SELECT id, address \n          FROM table2 AS t3 \n         WHERE t3.id = t1.id) AS t2\n WHERE t1.salary &gt; 50,000;\n</code></pre>\n\n<p>We will refer to the use of a computed table as part of an SQL query as a subquery. In the example above, the second (indented) <code>SELECT</code> is a subquery.</p>\n\n<p>Can all SQL queries be written in such a way as to not use subqueries? The example above can:</p>\n\n<pre><code>SELECT t1.name, t2.address\n  FROM table1 AS t1 \n  JOIN table2 AS t2\n    ON t1.id = t2.id\n WHERE t1.salary &gt; 50,000;\n</code></pre>\n\n<p>This example is somewhat spurious, or trivial, but one can imagine instances where considerably more effort might be required to recover an equivalent expression. In other words, is it the case that for every SQL query $q$ with subqueries, there exists a query $q&#39;$ without subqueries such that $q$ and $q&#39;$ are guaranteed to produce the same results for the same underlying tables? Let us limit SQL queries to the following form:</p>\n\n<pre><code>SELECT &lt;attribute&gt;,\n      ...,\n      &lt;attribute&gt;\n FROM &lt;a table, not a subquery&gt;\n JOIN &lt;a table, not a subquery&gt;\n  ...\n JOIN &lt;a table, not a subquery&gt;\nWHERE &lt;condition&gt;\n  AND &lt;condition&gt;\n  ...\n  AND &lt;condition&gt;\n\nUNION\n -or-\nEXCEPT\n -or-\n&lt;similar&gt;\n\nSELECT ...\n</code></pre>\n\n<p>And so on. I think left and right outer joins don't add much, but if I am mistaken, please feel free to point that out... in any event, they are fair game as well. As far as set operations go, I guess any of them are fine... union, difference, symmetric difference, intersection, etc... anything that is helpful. Are there any known forms to which all SQL queries can be reduced? Do any of these eliminate subqueries? Or are there some instances where no equivalent, subquery-free query exists? References are appreciated... or a demonstration (by proof) that they are or aren't required would be fantastic. Thanks, and sorry if this is a celebrated (or trivial) result of which I am painfully ignorant.</p>\n",
+   "ViewCount": 1832,
+   "Tags": "<database-theory><relational-algebra>",
+   "CommentCount": 6,
+   "AnswerCount": 3,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>We know that DFAs are equivalent to NFAs in expressiveness power; there is also a known algorithm for converting NFAs to DFAs (unfortunately I do now know the inventor of that algorithm), which in worst case gives us $2^S$ states, if our NFA had $S$ states.</p>\n\n<p>My question is: what is determining the worst case scenario?</p>\n\n<hr>\n\n<p>Here's a transcription of an algorithm in case of ambiguity:</p>\n\n<p>Let $A = (Q,\\Sigma,\\delta,q_0,F)$ be a NFA. We construct a DFA $A&#39; = (Q&#39;,\\Sigma,\\delta&#39;,q&#39;_0,F&#39;)$ where </p>\n\n<ul>\n<li>$Q&#39; = \\mathcal{P}(Q)$, </li>\n<li>$F&#39; = \\{S \\in Q&#39; | F \\cap S \\neq \\emptyset \\}$,</li>\n<li>$\\delta&#39;(S,a) =\\bigcup_{s \\in S} (\\delta(s,a) \\cup \\hat \\delta(s,\\varepsilon))$, and</li>\n<li>$q&#39;_0 = \\{q_0\\} \\cup \\hat \\delta(q_0, \\varepsilon)$,</li>\n</ul>\n\n<p>where $\\hat\\delta$ is the extended transition function of $A$.</p>\n",
+   "ViewCount": 1141,
+   "Tags": "<formal-languages><automata><regular-languages><finite-automata><nondeterminism>",
+   "CommentCount": 1,
+   "AnswerCount": 3,
+   "creationTime": 3
+ },
+ {
+   "Body": "<p>Suppose that a certain parallel application uses a master-slave design to process a large number of workloads. Each workload takes some number of cycles to complete; the number of cycles any given workload will take is given by a known random variable $X$. Assume that there are $n$ such workloads and $m$ equivalent slaves (processing nodes). Naturally, a more general version of this question addresses the case of slaves of differing capabilities, but we ignore this for now.</p>\n\n<p>The master cannot process workloads, but can distribute workloads to slave nodes and monitor progress of slave nodes. Specifically, the master can perform the following actions:</p>\n\n<ol>\n<li>Instantaneously begin processing of any $k$ workloads on any free node.</li>\n<li>Instantaneously receive confirmation of the completion by a node of a previously initiated batch of $k$ workloads.</li>\n<li>At any point in time, and instantaneously, determine the state of all nodes (free or busy) as well as the number of workloads completed and the number of workloads remaining.</li>\n</ol>\n\n<p>For simplicity's sake, assume $k$ divides $n$.</p>\n\n<p>There are at least two categories of load balancing strategies for minimizing the total execution time of all workloads using all slaves (to clarify, I'm talking about the makespan or wall-clock time, not the aggregate process time, which is independent of the load-balancing strategy being used under the simplifying assumptions being made in this question): static and dynamic. In a static scheme, all placement decisions are made at time $t = 0$. In a dynamic scheme, the master can make placement decisions using information about the progress being made by some slaves, and as such, better utilization can be attained (in practice, there are overheads associated with dynamic scheduling as compared to static scheduling, but we ignore these). Now for some questions:</p>\n\n<ol>\n<li>Is there a better way to statically schedule workloads than to divide batches of $k$ workloads among the $m$ slaves as evenly as possible (we can also assume, for simplicity's sake, that $m$ divides $n/k$, so batches could be statically scheduled completely evenly)? If so, how?</li>\n<li>Using the best static scheduling policy, what should the mean and standard deviation be for the total execution time, in terms of the mean $\\mu$ and standard deviation $\\sigma$ of $X$? </li>\n</ol>\n\n<p>A simple dynamic load balancer might schedule $i$ batches of $k$ workloads to each slave initially, and then, when nodes complete the initial $i$ batches, schedule an additional batch of $k$ workloads to each slave on a first-come, first-served basis. So if two slave nodes are initially scheduled 2 batches of 2 workloads each, and the first slave finishes its two batches, an additional batch is scheduled to the first slave, while the second slave continues working. If the first slave finishes the new batch before the second batch finishes its initial work, the master will continue scheduling to the first slave. Only when the second slave completes executing its work will it be issued a new batch of workloads. Example:</p>\n\n<pre><code>         DYNAMIC           STATIC\n         POLICY            POLICY\n\n     slave1  slave2    slave1  slave2\n     ------  ------    ------  ------\n\nt&lt;0    --      --        --      --\n\nt&lt;1  batch1  batch3    batch1  batch3\n     batch2  batch4    batch2  batch4\n                       batch5  batch7\n                       batch6  batch8\n\nt=1    --    batch3    batch5  batch3\n             batch4    batch6  batch4\n                               batch7\n                               batch8\n\nt&lt;2  batch5  batch3    batch5  batch3\n             batch4    batch6  batch4\n                               batch7\n                               batch8\n\nt=2    --    batch4    batch6  batch4\n                               batch7\n                               batch8\n\nt&lt;3  batch6  batch4    batch6  batch4\n                               batch7\n                               batch8\n\nt=3    --      --        --    batch7\n                               batch8\n\nt&lt;4  batch7  batch8      --    batch7\n                               batch8\n\nt=4    --      --        --    batch8\n\nt&lt;5      -DONE-          --    batch8\n\nt=5                      --      --\n\nt &lt; 6                      -DONE-\n</code></pre>\n\n<p>For clarification, batches 1 and 2 take 1/2 second each to be processed, batch 3 takes 2 seconds to be processed, and batches 4-8 take 1 second each to be processed. This information is not known a-priori; in the static scheme, all jobs are distributed at t=0, whereas in the dynamic scheme, distribution can take into account what the actual runtimes of the jobs \"turned out\" to be. We notice that the static scheme takes one second longer than the dynamic scheme, with slave1 working 3 seconds and slave2 working 5 seconds. In the dynamic scheme, both slaves work for the full 4 seconds.</p>\n\n<p>Now for the question that motivated writing this:</p>\n\n<ol>\n<li>Using the dynamic load balancing policy described above, what should the mean and standard deviation be for the total execution time, in terms of the mean $\\mu$ and standard deviation $\\sigma$ of $X$?</li>\n</ol>\n\n<p>Interested readers have my assurances that this isn't homework, although it probably isn't much harder than what one might expect to get as homework in certain courses. Given that, if anyone objects to this being asked and demands that I show some work, I will be happy to oblige (although I don't know when I'll have time in the near future). This question is actually based on some work that I never got around to doing a semester or two ago, and empirical results were where we left it. Thanks for help and/or effort, I'll be interested to see what you guys put together.</p>\n",
+   "ViewCount": 330,
+   "Tags": "<scheduling><distributed-systems><parallel-computing>",
+   "CommentCount": 9,
+   "AnswerCount": 1,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>According to <a href=\"http://books.google.ca/books?id=kWSZ0OWnupkC&amp;pg=PA224#v=onepage&amp;q&amp;f=false\">Immerman</a>, the complexity class associated with <a href=\"http://en.wikipedia.org/wiki/SQL\">SQL</a> queries is exactly the class of <em>safe queries</em> in $\\mathsf{Q(FO(COUNT))}$ (first-order queries plus counting operator): SQL captures safe queries. (In other words, all SQL queries have a complexity in $\\mathsf{Q(FO(COUNT))}$, and all problems in $\\mathsf{Q(FO(COUNT))}$ can be expressed as an SQL query.)</p>\n\n<p>Based on this result, from theoretical point of view, there are many interesting problems that can be solved efficiently but are not expressible in SQL. Therefore an extension of SQL which is still efficient seems interesting. So here is my question:</p>\n\n<blockquote>\n  <p>Is there an <strong>extension of SQL</strong> (implemented and <strong>used in the industry</strong>) which <strong>captures $\\mathsf{P}$</strong> (i.e. can express all polynomial-time computable queries and no others)?</p>\n</blockquote>\n\n<p>I want a database query language which stisfies all three conditions. It is easy to define an extension which would extend SQL and will capture $\\mathsf{P}$. But my questions is if such a language makes sense from the practical perspective, so I want a language that is being used in practice. If this is not the case and there is no such language, then I would like to know if there is a reason that makes such a language uninteresting from the practical viewpoint? For example, are the queries that rise in practice usually simple enough that there is no need for such a language?</p>\n",
+   "ViewCount": 266,
+   "Tags": "<database-theory><complexity-theory><finite-model-theory><descriptive-complexity>",
+   "CommentCount": 17,
+   "AnswerCount": 3,
+   "creationTime": 5
+ },
+ {
+   "Body": "<p>Today, a talk by Henning Kerstan (\"Trace Semantics for Probabilistic Transition Systems\") confronted me with category theory for the first time. He has built a theoretical framework for describing probablistic transition systems and their behaviour in a general way, i.e. with uncountably infinite state sets and different notions of traces. To this end, he goes up through several layers of abstraction to finally end up with the notion of <a href=\"https://en.wikipedia.org/wiki/Monad_%28category_theory%29\">monads</a> which he combines with measure theory to build the model he needs.</p>\n\n<p>In the end, it took him 45 minutes to (roughly) build a framework to describe a concept he initially explained in 5 minutes. I appreciate the beauty of the approach (it <em>does</em> generalise nicely over different notions of traces) but it strikes me as an odd balance nevertheless.</p>\n\n<p>I struggle to see what a monad really <em>is</em> and how so general a concept can be useful in applications (both in theory and practice). Is it really worth the effort, result-wise?</p>\n\n<p>Therefore this question: </p>\n\n<blockquote>\n  <p>Are there problems that are natural (in the sense of CS) on which\n  the abstract notion of monads can be applied and helps (or is even\n  instrumental) to derive desired results (at all or in a nicer way \n  than without)?</p>\n</blockquote>\n",
+   "ViewCount": 180,
+   "Tags": "<applied-theory><category-theory>",
+   "CommentCount": 4,
+   "AnswerCount": 1,
+   "creationTime": 6
+ },
+ {
+   "Body": "<p>I want to know if the following problem is decidable and how to find out. Every problem I see I can say \"yes\" or \"no\" to it, so are most problems and algorithms decidable except a few (which is provided <a href=\"http://en.wikipedia.org/wiki/List_of_undecidable_problems\">here</a>)?</p>\n\n<blockquote>\n  <p>Input: A directed and finite graph $G$, with $v$ and $u$ as vertices<br>\n  Question: Does a path in $G$ with $u$ as initial vertex and $v$ as final vertex exist?</p>\n</blockquote>\n",
+   "ViewCount": 464,
+   "Tags": "<algorithms><computability><graph-theory><undecidability>",
+   "CommentCount": 1,
+   "AnswerCount": 4,
+   "creationTime": 1
+ },
+ {
+   "Body": "<p>There are many ways to define the <a href=\"https://en.wikipedia.org/wiki/Kolmogorov_complexity\">Kolmogorov-Complexity</a>, and usually, all these definitions they are equivalent up to an additive constant. That is if $K_1$ and $K_2$ are kolmogorov complexity functions (defined via different languages or models), then there exists a constant $c$ such that for every string $x$, $|K_1(x) - K_2(x)| &lt; c$. I believe this is because for every Kolmogorov complexity function $K$ and for every $x$ it holds that $K(x) \\le |x| +c$, for some constant $c$.</p>\n\n<p>I'm interested in the following definitions for $K$, based on Turing-machines</p>\n\n<ol>\n<li><strong>number of states</strong>: Define $K_1(x)$ to be the minimal number $q$ such that a TM with $q$ states outputs $x$ on the empty string.</li>\n<li><strong>Length of Program</strong>: Define $K_2(x)$ to be the shortest \"program\" that outputs $x$. Namely, fix a way to encode TMs into binary strings; for a machine $M$ denote its (binary) encoding as $\\langle M \\rangle$.  $K_2(x) = \\min |\\langle M \\rangle|$ where the minimum is over all $M$'s that output $x$ on empty input.</li>\n</ol>\n\n<p>Are $K_1$ and $K_2$ equivalent? What is the relation between them, and which one grasps better the concept of Kolmogorov complexity, if they are not equivalent.</p>\n\n<p>What especially bugs me is the rate $K_2$ increase with $x$, which seems not to be super-linear (or at least linear with constant $C&gt;1$ such that $K_2 &lt; C|x|$, rather than $|x|+c$).\nConsider the most simple TM that outputs $x$ - the one that just encodes $x$ as part of its states and transitions function. it is immediate to see that\n$K_1(x) \\le |x|+1$. However the encoding of the same machine is much larger, and the trivial bound I get is $K_2(x) \\le |x|\\log |x|$. </p>\n",
+   "ViewCount": 201,
+   "Tags": "<computability><kolmogorov-complexity>",
+   "CommentCount": 4,
+   "AnswerCount": 1,
+   "creationTime": 1
+ },
+ {
+   "Body": "<p>I am starting a personal bibliographic research on type-checking algorithms and want some tips. What are the most commonly used type-checking algorithms, strategies and general techniques?</p>\n\n<p>I am particularly interested in complex type-checking algorithms that were implemented in widely known strongly static typed languages such as, for example, C++, Java 5+, Scala or others. I.E, type-checking algorithms that are not very simple due to the very simple typing of the underlying language (like Java 1.4 and below).</p>\n\n<p>I am not per se interested in a specific language X, Y or Z. I am interested in type-checking algorithms regardless of the language that they target. If you provide a answer like \"language L that you never heard about which is strongly typed and the typing is complex has a type-checking algorithm that does A, B and C by checking X and Y using the algorithm Z\", or \"the strategy X and Y used for Scala and a variant Z of A used for C# are cool because of the R, S and T features that works in that way\", then the answers are nice.</p>\n",
+   "ViewCount": 1387,
+   "Tags": "<algorithms><programming-languages><reference-request><type-checking>",
+   "CommentCount": 15,
+   "AnswerCount": 2,
+   "creationTime": 2
+ },
+ {
+   "Body": "<p>In computer networking and high-performance cluster computer design, network topology refers to the design of the way in which nodes are connected by links to form a communication network. Common network topologies include the mesh, torus, ring, star, tree, etc. These topologies can be studied analytically to determine properties related to their expected performance; such characteristics include diameter (maximal distance between a pair of nodes, in terms of the number of links which must be crossed if such nodes communicate), the average distance between nodes (over all pairs of nodes in the network), and the bisection bandwidth (the worst-case bandwidth between two halves of the network). Naturally, other topologies and metrics exist.</p>\n\n<p>Consider a network topology based on the Koch snowflake. The simplest incarnation of such a topology consists of three nodes and three links in a fully-connected setup. The diameter is 1, average distance is 1 (or 2/3, if you include communications inside a node), etc.</p>\n\n<p>The next incarnation of the topology consists of 12 nodes and 15 links. There are three clusters of three nodes fully, each cluster being fully connected by three links. Additionally, there are the three original nodes, connecting the three clusters using six additional links.</p>\n\n<p>In fact, the number of nodes and links in incarnation $k$ are described by the following recurrence relations:\n$$N(1) = 3$$\n$$L(1) = 3$$\n$$N(k+1) = N(k) + 3L(k)$$\n$$L(k+1) = 5L(k)$$\nHopefully, the shape of this topology is clear; incarnation $k$ looks like the $k^{th}$ incarnation of the Koch snowflake. (A key difference is that for what I have in mind, I am actually keeping the link between the 1/3 and 2/3 nodes on successive iterations, so that each \"triangle\" is fully connected and the above recurrence relations hold).</p>\n\n<p>Now for the question:</p>\n\n<blockquote>\n  <p>Has this network topology been studied, and if so, what is it called? If it has been studied extensively, are there any references? If not, what are the diameter, average distance and bisection bandwidth of this topology? How do these compare to other kinds of topologies, in terms of cost (links) &amp; benefit?</p>\n</blockquote>\n\n<p>I have heard of a \"star of stars\" topology, which I think is similar, but not identical, to this. If anything, this seems to be more of a \"ring of rings\", or something along those lines. Naturally, tweaks could be made to the definition of this topology, and more advanced questions could be asked (for instance, we could assign different bandwidths to links introduced at earlier stages, or discuss scheduling or data placement for such a topology). More generally, I am also interested in any good references for exotic or little-studied network topologies (regardless of practicality). </p>\n\n<p>Again, apologies if this demonstrates ignorance of relevant research results, and any insights are appreciated.</p>\n",
+   "ViewCount": 214,
+   "Tags": "<computer-networks><network-topology>",
+   "CommentCount": 0,
+   "AnswerCount": 1,
+   "creationTime": 2
+ }]}}
